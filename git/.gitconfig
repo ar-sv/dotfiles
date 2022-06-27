@@ -1,0 +1,49 @@
+[user]
+	email = akshay.rawat@checkr.com
+	name = Akshay Rawat
+	signingkey = 4CA01A8DB077A814
+[push]
+  default = tracking
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+	ui = true
+[core]
+	excludesfile = /Users/akshay.rawat/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[format]
+  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[alias]
+  ac = !git add -A && git commit -m
+  ci = commit -m
+  st = status -sb
+  di = diff
+  dic = diff --cached
+  rh = reset --hard
+  co = checkout
+  br = branch
+  pl = pull
+  ps = push
+  plre = pull --rebase
+  out = log origin..HEAD
+  ci = commit
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  as = "!f(){ git reset --soft HEAD~$1 && git commit ${2:+-m \"$2\"}; };f"
+[branch "master"]
+    mergeoptions = --no-ff
+[branch "develop"]
+    mergeoptions = --no-ff
+[github]
+	user = akshay-8d66
+[commit]
+  gpgsign = true
+[gpg]
+	program = gpg
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main

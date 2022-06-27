@@ -1,0 +1,14 @@
+.idea
+.DS_Store
+.rakeTasks
+.generators
+.classpath
+.gitignore
+.project
+.scratches
+
+.vscode
+
+
+// for bullhorn
+// Makefile
