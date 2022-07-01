@@ -6,7 +6,9 @@ eval "$(rbenv init - zsh)"
 
 
 # Aliases
-
 alias g="git"
 alias b="bundle"
 
+if [ -r ~/.zshrc-$HOST ]; then
+  source ~/.zshrc-$HOST
+fi
