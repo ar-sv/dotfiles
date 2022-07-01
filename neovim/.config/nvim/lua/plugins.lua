@@ -1,7 +1,6 @@
 return require('packer').startup({function(use)
   use { 'wbthomason/packer.nvim' }
   use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
-  use { 'mhinz/vim-startify' }
   use { 'DanilaMihailov/beacon.nvim' }
   use { 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons' }
   use { 'Mofiqul/dracula.nvim' }
@@ -24,13 +23,6 @@ return require('packer').startup({function(use)
   use { 'lewis6991/gitsigns.nvim' }
   use { 'numToStr/Comment.nvim' }
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
-
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup()
-    end
-  }
 end,
   config = {
   }
