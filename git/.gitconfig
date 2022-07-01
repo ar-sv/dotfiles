@@ -1,49 +1,35 @@
-[user]
-	email = akshay.rawat@checkr.com
-	name = Akshay Rawat
-	signingkey = 4CA01A8DB077A814
+[init]
+  defaultBranch = main
+  templatedir = ~/.git_template
 [push]
-  default = tracking
+  default = current
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-	ui = true
-[core]
-	excludesfile = /Users/akshay.rawat/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
-[format]
-  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+  ui = auto
 [alias]
   ac = !git add -A && git commit -m
-  ci = commit -m
-  st = status -sb
-  di = diff
-  dic = diff --cached
-  rh = reset --hard
-  co = checkout
-  br = branch
-  pl = pull
-  ps = push
-  plre = pull --rebase
-  out = log origin..HEAD
-  ci = commit
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   as = "!f(){ git reset --soft HEAD~$1 && git commit ${2:+-m \"$2\"}; };f"
-[branch "master"]
-    mergeoptions = --no-ff
-[branch "develop"]
-    mergeoptions = --no-ff
-[github]
-	user = akshay-8d66
+  br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  co = checkout
+  cob = checkout -b
+  del = branch -D
+  lg = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  plre = pull --rebase
+  ps = push
+  out = lg origin..HEAD
+  psf = push --force
+  st = status
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[merge]
+  ff = only
 [commit]
-  gpgsign = true
-[gpg]
-	program = gpg
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-[init]
-	defaultBranch = main
+  template = ~/.gitmessage
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[include]
+  path = ~/.gitconfig.local
+[diff]
+  colorMoved = zebra
