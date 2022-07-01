@@ -24,4 +24,10 @@ require('Comment').setup()
 require('nvim-tree').setup()
 require('gitsigns').setup()
 require('Comment').setup()
-require("bufferline").setup()
+require('bufferline').setup()
+
+require('telescope').setup({
+  defaults = {
+    file_ignore_patterns = { '.git/' },
+  }
+})
