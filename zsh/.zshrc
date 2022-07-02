@@ -22,6 +22,5 @@ wip() {
   fi
 }
 
-if [ -r ~/.zshrc.local ]; then
-  source ~/.zshrc.local
-fi
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.zshrc.local" && source "${HOME}/.zshrc.local"
