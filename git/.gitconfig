@@ -19,7 +19,7 @@
   psf = push --force
   st = status
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = ~/dev/dotfiles/git/.gitignore
   autocrlf = input
 [merge]
   ff = only
