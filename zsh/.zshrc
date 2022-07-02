@@ -22,6 +22,6 @@ wip() {
   fi
 }
 
-if [ -r ~/.zshrc-$HOST ]; then
-  source ~/.zshrc-$HOST
+if [ -r ~/.zshrc.local ]; then
+  source ~/.zshrc.local
 fi
