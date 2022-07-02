@@ -9,7 +9,9 @@ export EDITOR="nvim"
 # Aliases
 alias g="git"
 alias g-cleanup='git branch | grep -v "main" | xargs git branch -D'
+alias grh='git reset --hard && git clean -fd'
 alias b="bundle"
+alias be="bundle exec"
 alias v="nvim"
 
 # Functions
