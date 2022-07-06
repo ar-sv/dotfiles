@@ -1,3 +1,7 @@
+# machine specific configs
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.zshrc.local" && source "${HOME}/.zshrc.local"
+
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
 
@@ -23,7 +27,3 @@ wip() {
     g as $1 "WIP"
   fi
 }
-
-# machine specific configs
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-test -e "${HOME}/.zshrc.local" && source "${HOME}/.zshrc.local"
