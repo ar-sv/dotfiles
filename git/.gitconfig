@@ -21,8 +21,6 @@
 [core]
   excludesfile = ~/dev/dotfiles/git/.gitignore
   autocrlf = input
-[merge]
-  ff = only
 [commit]
   template = ~/.gitmessage
 [fetch]
