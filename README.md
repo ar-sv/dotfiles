@@ -9,3 +9,4 @@ Set "General > Preferences > Load..." to the `iterm2` folder in this repo.
 ### Prerequisites
 
 * `brew install stow`
+* `brew tap homebrew/cask-fonts && brew install --cask font-fira-code-nerd-font`
