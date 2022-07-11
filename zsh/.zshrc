@@ -17,6 +17,7 @@ alias grh='git reset --hard && git clean -fd'
 alias b="bundle"
 alias be="bundle exec"
 alias v="nvim"
+alias cat="bat --style=plain"
 
 # Functions
 wip() {
