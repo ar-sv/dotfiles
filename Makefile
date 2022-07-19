@@ -8,5 +8,5 @@ delete:
 
 .PHONY: install_deps
 install_deps: 
-	brew install stow ripgrep bat git-delta
+	brew install stow ripgrep bat git-delta zsh-vi-mode
 	brew tap homebrew/cask-fonts && brew install --cask font-fira-code-nerd-font

@@ -8,3 +8,8 @@ Set "General > Preferences > Load..." to the `iterm2` folder in this repo.
 
 ### Prerequisites
 * `make install_deps`
+
+### TODO
+* Copy and paste from NeoVim
+* TMux settings
+* VSCode settings
