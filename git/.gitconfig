@@ -22,7 +22,6 @@
   pager = delta
 [commit]
   template = ~/.gitmessage
-	gpgsign = true
 [fetch]
   prune = true
 [rebase]
