@@ -19,6 +19,7 @@ alias b="bundle"
 alias be="bundle exec"
 alias v="nvim"
 alias cat="bat --style=plain"
+alias tm="tmux attach || tmux new"
 
 # Functions
 wip() {
