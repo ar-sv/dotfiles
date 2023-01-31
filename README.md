@@ -27,3 +27,4 @@ Create and use these files for machine specific setup
 
 * Copy and paste from NeoVim
 * TMux settings
+* Evaluate nix
