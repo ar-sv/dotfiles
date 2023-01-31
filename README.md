@@ -1,33 +1,29 @@
+# README
+
+My dotfiles
+
+## Prerequisites
+
+* `make install_deps`
+
+## Installation
+
+* `make`
+
+## Manually setup dependencies
+
 ### Iterm2
 
 Set "General > Preferences > Load..." to the `iterm2` folder in this repo.
 
-### Local environment
+## Local extensions
+
+Create and use these files for machine specific setup
+
 * `~/.zshrc.local`
 * `~/.gitconfig.local`
 
-### Prerequisites
-* `make install_deps`
+## TODO
 
-### TODO
 * Copy and paste from NeoVim
 * TMux settings
-* VSCode settings
-
-### Manual
-
-SSH Agent
-
-In ~/.ssh/config
-
-```
-Host *
-    VisualHostKey yes
-    UserKnownHostsFile ~/.ssh/known_hosts
-    SendEnv TZ COLORTERM
-    ServerAliveInterval 180
-    ForwardAgent no
-    UseKeychain yes
-    AddKeysToAgent yes
-    IdentityFile ~/.ssh/id_rsa
-```
