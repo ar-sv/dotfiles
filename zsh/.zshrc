@@ -1,6 +1,8 @@
 # machine specific configs
 source "${HOME}/.iterm2_shell_integration.zsh"
-test -e "${HOME}/.zshrc.local" && source "${HOME}/.zshrc.local"
+[ -f ~/.zshrc.local ] && source "${HOME}/.zshrc.local"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # seems to break zsh
 # test -e /usr/local/opt/zsh-vi-mode && source /usr/local/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -32,3 +34,4 @@ wip() {
     g as $1 "WIP"
   fi
 }
+
