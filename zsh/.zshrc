@@ -14,6 +14,7 @@ path+=("$HOME/.rbenv/bin")
 eval "$(rbenv init - zsh)"
 
 export EDITOR="nvim"
+export BAT_THEME="Dracula"
 
 # Aliases
 alias g="git"
