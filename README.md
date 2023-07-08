@@ -16,10 +16,6 @@ My dotfiles
 
 Set "General > Preferences > Load..." to the `iterm2` folder in this repo.
 
-### Neovim
-
-* Run `:PackerUpdate` to get the latest plugins
-
 ## Local extensions
 
 Create and use these files for machine specific setup
@@ -29,6 +25,5 @@ Create and use these files for machine specific setup
 
 ## TODO
 
-* Copy and paste from NeoVim
 * TMux settings
 * Evaluate nix
