@@ -2,7 +2,6 @@
 source "${HOME}/.iterm2_shell_integration.zsh"
 [ -f ~/.zshrc.local ] && source "${HOME}/.zshrc.local"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # seems to break zsh
 # test -e /usr/local/opt/zsh-vi-mode && source /usr/local/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -22,7 +21,7 @@ alias g-cleanup='git branch | grep -v "main" | xargs git branch -D'
 alias grh='git reset --hard && git clean -fd'
 alias b="bundle"
 alias be="bundle exec"
-alias v="nvim"
+alias vi="nvim"
 alias cat="bat --style=plain"
 alias tm="tmux attach || tmux new"
 
