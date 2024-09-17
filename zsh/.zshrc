@@ -29,9 +29,9 @@ alias tm="tmux attach || tmux new"
 wip() {
   if [ -z "$1" ]
   then
-    g ac "WIP"
+    g acnv "WIP" --no-verify
   else
-    g as $1 "WIP"
+    g asnv $1 "WIP" --no-verify
   fi
 }
 
