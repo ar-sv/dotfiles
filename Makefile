@@ -12,7 +12,7 @@ delete:
 install_deps: 
 	brew install stow ripgrep bat git-delta zsh-vi-mode wget fzf starship rbenv fnm gpg bottom dust fd watch htop
 	$(BREW_PREFIX)/opt/fzf/install --all
-	brew tap homebrew/cask-fonts && brew install --cask font-fira-code-nerd-font
+	brew install --cask font-fira-code-nerd-font
 	curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 	rm -rf ~/.config//nvim
 	git clone https://github.com/LazyVim/starter ~/.config/nvim
