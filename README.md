@@ -25,5 +25,4 @@ Create and use these files for machine specific setup
 
 ## TODO
 
-* TMux settings
-* Evaluate nix
+* Auto install `vscode/settings.json` at the Mac user level. `ln -s ~/Library/Application\ Support/Code/User/settings.json`.
