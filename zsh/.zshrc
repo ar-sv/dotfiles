@@ -7,7 +7,7 @@ source "${HOME}/.iterm2_shell_integration.zsh"
 # test -e /usr/local/opt/zsh-vi-mode && source /usr/local/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 eval "$(starship init zsh)"
-eval "$(fnm env --use-on-cd)"
+# eval "$(fnm env --use-on-cd)"
 
 path+=("$HOME/.rbenv/bin")
 eval "$(rbenv init - zsh)"
@@ -35,3 +35,4 @@ wip() {
   fi
 }
 
+eval "$(/Users/akshay/.local/bin/mise activate zsh)"
