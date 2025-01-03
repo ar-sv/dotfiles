@@ -4,8 +4,9 @@ source "${HOME}/.iterm2_shell_integration.zsh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# seems to break zsh
-# test -e /usr/local/opt/zsh-vi-mode && source /usr/local/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# zsh vi mode
+bindkey -v
+bindkey -v '^?' backward-delete-char
 
 eval "$(starship init zsh)"
 export EDITOR="nvim"

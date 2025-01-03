@@ -10,7 +10,7 @@ delete:
 
 .PHONY: install_deps
 install_deps: 
-	brew install stow ripgrep bat git-delta zsh-vi-mode wget fzf starship rbenv fnm gpg bottom dust fd watch htop zsh-autosuggestions
+	brew install stow ripgrep bat git-delta wget fzf starship rbenv fnm gpg bottom dust fd watch htop zsh-autosuggestions
 	$(BREW_PREFIX)/opt/fzf/install --all
 	brew install --cask font-fira-code-nerd-font
 	curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
