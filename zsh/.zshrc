@@ -34,7 +34,4 @@ wip() {
   fi
 }
 
-eval "$(/Users/akshay/.local/bin/mise activate zsh)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/akshay/.cache/lm-studio/bin"
+eval "$($HOME/.local/bin/mise activate zsh)"
