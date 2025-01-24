@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "humao.rest-client",
+    "shopify.ruby-lsp",
+    "dbaeumer.vscode-eslint",
+    "mechatroner.rainbow-csv",
+    "sorbet.sorbet-vscode-extension",
+    "eamodio.gitlens",
+    "mongodb.mongodb-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "esbenp.prettier-vscode",
+    "vscodevim.vim",
+    "extensions.json",
+    "ms-vscode.makefile-tools",
+    "yoavbls.pretty-ts-errors",
+    "formulahendry.auto-rename-tag",
+    "shopify.ruby-extensions-pack",
+    "yzhang.markdown-all-in-one"
+  ],
+  "unwantedRecommendations": []
+}

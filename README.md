@@ -4,11 +4,11 @@ My dotfiles
 
 ## Prerequisites
 
-* `make install_deps`
+- `make install_deps`
 
 ## Installation
 
-* `make`
+- `make`
 
 ## Manually setup dependencies
 
@@ -20,9 +20,5 @@ Set "General > Preferences > Load..." to the `iterm2` folder in this repo.
 
 Create and use these files for machine specific setup
 
-* `~/.zshrc.local`
-* `~/.gitconfig.local`
-
-## TODO
-
-* Auto install `vscode/settings.json` at the Mac user level. `ln -s ~/Library/Application\ Support/Code/User/settings.json`.
+- `~/.zshrc.local`
+- `~/.gitconfig.local`
