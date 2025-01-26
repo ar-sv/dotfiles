@@ -42,11 +42,31 @@
   "editor.minimap.enabled": false,
   "editor.fontSize": 14,
   "mdb.confirmRunAll": false,
+  "search.exclude": {
+    "**/build": true,
+    "**/node_modules": true,
+    "**/.history": true,
+    "**/dist": true,
+     "**/node_modules/**": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/*.log": true,
+    "**/package-deps.json": true,
+    "**/.DS_Store": true
+  },
   "files.exclude": {
     "**/build": true,
     "**/node_modules": true,
     "**/.history": true,
-    "**/dist": true
+    "**/dist": true,
+     "**/node_modules/**": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/*.log": true,
+    "**/package-deps.json": true,
+    "**/.DS_Store": true
   },
   "gitlens.plusFeatures.enabled": false,
   "rest-client.enableTelemetry": false,
