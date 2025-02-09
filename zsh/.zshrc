@@ -10,7 +10,10 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 bindkey -v
 bindkey -v '^?' backward-delete-char
 
+# evals
 eval "$(starship init zsh)"
+eval "$($HOME/.local/bin/mise activate zsh)"
+
 export EDITOR="nvim"
 export BAT_THEME="Dracula"
 
@@ -33,5 +36,3 @@ wip() {
     g asnv $1 "WIP" --no-verify
   fi
 }
-
-eval "$($HOME/.local/bin/mise activate zsh)"
