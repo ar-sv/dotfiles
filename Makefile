@@ -12,7 +12,7 @@ delete:
 
 .PHONY: install_deps
 install_deps:
-	brew install neovim stow ripgrep bat git-delta wget fzf starship gpg bottom dust fd watch htop zsh-autosuggestions zsh-syntax-highlighting mise
+	brew install neovim stow ripgrep bat git-delta wget fzf starship gpg bottom dust fd watch htop zsh-autosuggestions zsh-syntax-highlighting mise inetutils
 	$(BREW_PREFIX)/opt/fzf/install --all
 	brew install --cask font-fira-code-nerd-font
 	curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
