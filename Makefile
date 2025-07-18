@@ -4,7 +4,6 @@ BREW_PREFIX=$(shell brew --prefix 2> /dev/null)
 all:
 	rm ~/Library/Application\ Support/Cursor/User/settings.json
 	ln -s ~/dev/dotfiles/vscode/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
-	cp -f vscode/extensions.json ~/.vscode/
 	stow --verbose --target=$$HOME --restow */
 
 .PHONY: delete
@@ -15,7 +14,5 @@ delete:
 install_deps:
 	brew install neovim stow ripgrep bat git-delta wget fzf starship gpg bottom dust fd watch htop mise inetutils
 	$(BREW_PREFIX)/opt/fzf/install --all
-	brew install --cask font-fira-code-nerd-font
-	curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 	rm -rf ~/.config//nvim
 	git clone https://github.com/LazyVim/starter ~/.config/nvim

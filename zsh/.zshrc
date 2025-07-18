@@ -2,6 +2,11 @@
 [ -f ~/.zshrc.local ] && source "${HOME}/.zshrc.local"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# zsh vi mode
+bindkey -v
+bindkey -v '^?' backward-delete-char
+
+# evals
 eval "$($HOME/.local/bin/mise activate zsh)"
 
 export EDITOR="nvim"
