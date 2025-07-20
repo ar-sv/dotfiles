@@ -2,7 +2,8 @@ BREW_PREFIX=$(shell brew --prefix 2> /dev/null)
 
 .PHONY: all
 all:
-	cp -f vscode/settings.json ~/Library/Application\ Support/Code/User/
+	rm ~/Library/Application\ Support/Cursor/User/settings.json
+	ln -s ~/dev/dotfiles/vscode/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
 	cp -f vscode/extensions.json ~/.vscode/
 	stow --verbose --target=$$HOME --restow */
 

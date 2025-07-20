@@ -1,17 +1,10 @@
 # machine specific configs
-source "${HOME}/.iterm2_shell_integration.zsh"
 [ -f ~/.zshrc.local ] && source "${HOME}/.zshrc.local"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# zsh vi mode
-bindkey -v
-bindkey -v '^?' backward-delete-char
-
-# evals
-eval "$(starship init zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
 
 export EDITOR="nvim"
