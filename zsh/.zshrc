@@ -2,15 +2,9 @@
 [ -f ~/.zshrc.local ] && source "${HOME}/.zshrc.local"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# zsh vi mode
-bindkey -v
-bindkey -v '^?' backward-delete-char
-
 # evals
 eval "$($HOME/.local/bin/mise activate zsh)"
-
 export EDITOR="nvim"
-export BAT_THEME="Dracula"
 
 # Aliases
 alias bake="bundle exec rake"
@@ -19,7 +13,7 @@ alias g="git"
 alias g-cleanup='git branch | grep -v "main" | xargs git branch -D'
 alias grh='git reset --hard && git clean -fd'
 alias vi="nvim"
-alias cat="bat --style=plain"
+alias cat="bat"
 
 # Functions
 wip() {

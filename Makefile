@@ -13,6 +13,7 @@ delete:
 .PHONY: install_deps
 install_deps:
 	brew install neovim stow ripgrep bat git-delta wget fzf starship gpg bottom dust fd watch htop mise inetutils
+	brew install --cask font-jetbrains-mono-nerd-font
 	$(BREW_PREFIX)/opt/fzf/install --all
 	rm -rf ~/.config//nvim
 	git clone https://github.com/LazyVim/starter ~/.config/nvim
