@@ -24,3 +24,5 @@ wip() {
     g asnv $1 "WIP" --no-verify
   fi
 }
+
+eval "$(starship init zsh)"
