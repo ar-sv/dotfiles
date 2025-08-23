@@ -6,6 +6,8 @@
 eval "$($HOME/.local/bin/mise activate zsh)"
 export EDITOR="nvim"
 
+bindkey -v
+
 # Aliases
 alias bake="bundle exec rake"
 alias be="bundle exec"
