@@ -12,7 +12,7 @@ delete:
 
 .PHONY: install_deps
 install_deps:
-	brew install neovim stow ripgrep bat eza git-delta wget fzf starship bottom dust fd watch htop mise inetutils starship
+	brew install neovim stow ripgrep bat eza git-delta wget fzf starship bottom dust fd watch htop mise inetutils
 	brew install --cask font-fira-code-nerd-font
 	brew install --cask iterm2
 	$(BREW_PREFIX)/opt/fzf/install --all
