@@ -14,6 +14,7 @@ delete:
 install_deps:
 	brew install neovim stow ripgrep bat eza git-delta wget fzf starship bottom dust fd watch htop mise inetutils starship
 	brew install --cask font-fira-code-nerd-font
+	brew install --cask iterm2
 	$(BREW_PREFIX)/opt/fzf/install --all
 	rm -rf ~/.config//nvim
 	git clone https://github.com/LazyVim/starter ~/.config/nvim
