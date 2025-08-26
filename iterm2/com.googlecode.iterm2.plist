@@ -365,6 +365,8 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Blend</key>
+			<real>0.55000000000000004</real>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
@@ -388,12 +390,16 @@
 			<string></string>
 			<key>Cursor Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.93561118841171265</real>
+				<key>Color Space</key>
+				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.47987908124923706</real>
 				<key>Red Component</key>
-				<real>0.73333334922790527</real>
+				<real>0.4844239354133606</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -410,12 +416,16 @@
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.59414201974868774</real>
+				<key>Color Space</key>
+				<string>P3</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.58976680040359497</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.27484482526779175</real>
 			</dict>
 			<key>Custom Command</key>
 			<string>No</string>
@@ -809,7 +819,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>60</integer>
+			<integer>50</integer>
 			<key>Screen</key>
 			<integer>0</integer>
 			<key>Scrollback Lines</key>
