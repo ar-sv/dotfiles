@@ -14,7 +14,7 @@ My dotfiles
 
 ### Iterm2
 
-Set "General > Preferences > Load..." to the `iterm2` folder in this repo.
+Set "General > Settings > Load..." to the `iterm2` folder in this repo.
 
 ## Local extensions
 

@@ -2,8 +2,9 @@ BREW_PREFIX=$(shell brew --prefix 2> /dev/null)
 
 .PHONY: all
 all:
-	rm ~/Library/Application\ Support/Cursor/User/settings.json
-	ln -s ~/dev/dotfiles/vscode/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
+	rm -f ~/Library/Application\ Support/Cursor/User/settings.json
+	rm -f ~/.zshrc 
+	rm -f ~/.fzf.zsh 
 	stow --verbose --target=$$HOME --restow */
 
 .PHONY: delete

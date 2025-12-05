@@ -3,7 +3,7 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # evals
-eval "$($HOME/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 export EDITOR="nvim"
 
 bindkey -v
