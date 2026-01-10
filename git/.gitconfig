@@ -24,6 +24,7 @@
   pager = delta
 [commit]
   template = ~/.gitmessage
+	gpgsign = true
 [fetch]
   prune = true
 [rebase]
@@ -40,3 +41,7 @@
     conflictstyle = diff3
 [diff]
     colorMoved = default
+[gpg]
+	format = ssh
+[user]
+	signingkey = ~/.ssh/id_rsa.pub
