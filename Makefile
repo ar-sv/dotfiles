@@ -1,21 +1,16 @@
-BREW_PREFIX=$(shell brew --prefix 2> /dev/null)
+.PHONY: all delete install help
 
-.PHONY: all
-all:
-	rm -f ~/Library/Application\ Support/Cursor/User/settings.json
-	rm -f ~/.zshrc 
-	rm -f ~/.fzf.zsh 
-	stow --verbose --target=$$HOME --restow */
+all: ## Stow all dotfiles
+	@echo "Stowing dotfiles..."
+	rm -f ~/.zshrc ~/.fzf.zsh
+	stow --verbose --target=$(HOME) --restow */
 
-.PHONY: delete
-delete:
-	stow --verbose --target=$$HOME --delete */
+delete: ## Remove all dotfile symlinks
+	@echo "Removing dotfiles..."
+	stow --verbose --target=$(HOME) --delete */
 
-.PHONY: install_deps
-install_deps:
-	brew install neovim stow ripgrep bat eza git-delta wget fzf starship bottom dust fd watch htop mise inetutils tree fd jq
-	brew install --cask font-fira-code-nerd-font
-	brew install --cask iterm2
-	$(BREW_PREFIX)/opt/fzf/install --all
-	rm -rf ~/.config//nvim
-	git clone https://github.com/LazyVim/starter ~/.config/nvim
+install: ## Full setup for new machines
+	./install.sh
+
+help: ## Show this help
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'

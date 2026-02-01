@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+
+echo "==> Installing Xcode Command Line Tools (if needed)..."
+if ! xcode-select -p &> /dev/null; then
+  xcode-select --install
+  echo "Please complete the Xcode CLI tools installation, then re-run this script."
+  exit 1
+fi
+
+echo "==> Installing Homebrew (if needed)..."
+if ! command -v brew &> /dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+echo "==> Installing dependencies..."
+brew bundle --file=Brewfile
+
+echo "==> Setting up dotfiles..."
+make
+
+echo "==> Setting up FZF..."
+$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
+
+echo ""
+echo "Done! Next steps:"
+echo "  1. Create ~/.gitconfig.local with your name/email"
+echo "  2. Create ~/.zshrc.local for machine-specific config"
+echo "  3. Load iTerm2 settings: Preferences > General > Settings > Load from folder"
+echo "  4. Restart your terminal"

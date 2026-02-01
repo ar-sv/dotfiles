@@ -1,0 +1,8 @@
+# Machine-specific PATH additions
+# export PATH="$HOME/custom/bin:$PATH"
+
+# Work-specific aliases
+# alias deploy="./scripts/deploy.sh"
+
+# Local environment variables
+# export API_KEY="..."
