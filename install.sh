@@ -29,6 +29,25 @@ echo "==> Configuring iTerm2..."
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$SCRIPT_DIR/apps/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
+echo "==> Configuring VS Code & Cursor..."
+for app_dir in "Code" "Cursor"; do
+  USER_DIR="$HOME/Library/Application Support/$app_dir/User"
+  mkdir -p "$USER_DIR"
+  for file in settings.json extensions.json; do
+    target="$USER_DIR/$file"
+    # Remove broken symlinks
+    if [ -L "$target" ] && [ ! -e "$target" ]; then
+      rm "$target"
+    fi
+    if [ ! -f "$target" ]; then
+      cp "$SCRIPT_DIR/apps/vscode/$file" "$target"
+      echo "  [$app_dir] Copied $file"
+    else
+      echo "  [$app_dir] Skipped $file (already exists)"
+    fi
+  done
+done
+
 echo ""
 echo "Done! Next steps:"
 echo "  1. Create ~/.gitconfig.local with your name/email"
