@@ -23,9 +23,13 @@ make
 echo "==> Setting up FZF..."
 $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
 
+echo "==> Configuring iTerm2..."
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$SCRIPT_DIR/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
 echo ""
 echo "Done! Next steps:"
 echo "  1. Create ~/.gitconfig.local with your name/email"
 echo "  2. Create ~/.zshrc.local for machine-specific config"
-echo "  3. Load iTerm2 settings: Preferences > General > Settings > Load from folder"
-echo "  4. Restart your terminal"
+echo "  3. Restart your terminal"

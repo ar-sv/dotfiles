@@ -17,8 +17,6 @@ cp examples/gitconfig.local.example ~/.gitconfig.local  # Your name/email
 cp examples/zshrc.local.example ~/.zshrc.local          # Machine-specific config
 ```
 
-Then: iTerm2 > Preferences > General > Settings > Load from `~/dev/dotfiles/iterm2`
-
 ## How it Works
 
 - **[GNU Stow](https://www.gnu.org/software/stow/)** symlinks config files to `$HOME`. Each folder (git/, zsh/, etc.) is a "package" mirroring your home directory structure.
