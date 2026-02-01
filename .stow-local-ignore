@@ -1,12 +1,2 @@
-# Editor directories
-vscode
-.vscode
-
-# Repo files (don't stow these)
-README.md
-Brewfile
-install.sh
-Makefile
-examples
-\.git
-\.gitignore
+# This file is only needed in packages/ subdirectories
+# but kept here for documentation

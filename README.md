@@ -19,9 +19,28 @@ cp examples/zshrc.local.example ~/.zshrc.local          # Machine-specific confi
 
 ## How it Works
 
-- **[GNU Stow](https://www.gnu.org/software/stow/)** symlinks config files to `$HOME`. Each folder (git/, zsh/, etc.) is a "package" mirroring your home directory structure.
+- **[GNU Stow](https://www.gnu.org/software/stow/)** symlinks config files to `$HOME`. Packages live in `packages/` and mirror your home directory structure.
 - **Brewfile** declares all dependencies. Homebrew installs them idempotently.
 - **Local files** (`~/.gitconfig.local`, `~/.zshrc.local`) let you override settings without committing personal info.
+
+## Structure
+
+```
+dotfiles/
+├── packages/           # Stow packages (symlinked to $HOME)
+│   ├── git/            # → ~/.config/git/
+│   ├── shell/          # → ~/.fzf.zsh, ~/.hushlogin, ~/.gemrc
+│   ├── starship/       # → ~/.config/starship.toml
+│   └── zsh/            # → ~/.zshrc
+├── apps/               # App configs (not stowed)
+│   ├── iterm2/         # Loaded via defaults
+│   ├── vscode/         # Reference settings
+│   └── cursorrules/    # Cursor AI rules
+├── examples/           # Templates for local configs
+├── Brewfile
+├── Makefile
+└── install.sh
+```
 
 ## Commands
 

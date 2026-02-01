@@ -19,12 +19,11 @@
   out = lg origin..HEAD
   st = status
 [core]
-  excludesfile = ~/dev/dotfiles/git/.gitignore
   autocrlf = input
   pager = delta
 [commit]
   template = ~/.gitmessage
-	gpgsign = true
+  gpgsign = true
 [fetch]
   prune = true
 [rebase]
@@ -32,16 +31,14 @@
 [include]
   path = ~/.gitconfig.local
 [diff]
-  colorMoved = zebra
+  colorMoved = default
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [delta]
-    navigate = true
+  navigate = true
 [merge]
-    conflictstyle = diff3
-[diff]
-    colorMoved = default
+  conflictstyle = diff3
 [gpg]
-	format = ssh
+  format = ssh
 [user]
-	signingkey = ~/.ssh/id_rsa.pub
+  signingkey = ~/.ssh/id_rsa.pub

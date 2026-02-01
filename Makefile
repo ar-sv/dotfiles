@@ -1,16 +1,21 @@
 .PHONY: all deps delete install update help
 
+PACKAGES_DIR := packages
+
 all: ## Stow all dotfiles
+	@echo "Cleaning up old symlinks..."
+	rm -f ~/.zshrc ~/.fzf.zsh ~/.gitconfig ~/.gemrc ~/.hushlogin
+	rm -f ~/.config/starship.toml
+	rm -rf ~/.config/git
 	@echo "Stowing dotfiles..."
-	rm -f ~/.zshrc ~/.fzf.zsh
-	stow --verbose --target=$(HOME) --restow */
+	cd $(PACKAGES_DIR) && stow --verbose --target=$(HOME) --restow */
 
 deps: ## Install Brewfile packages
 	brew bundle
 
 delete: ## Remove all dotfile symlinks
 	@echo "Removing dotfiles..."
-	stow --verbose --target=$(HOME) --delete */
+	cd $(PACKAGES_DIR) && stow --verbose --target=$(HOME) --delete */
 
 install: ## Full setup for new machines
 	./install.sh

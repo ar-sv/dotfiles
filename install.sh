@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 echo "==> Installing Xcode Command Line Tools (if needed)..."
 if ! xcode-select -p &> /dev/null; then
   xcode-select --install
@@ -24,8 +26,7 @@ echo "==> Setting up FZF..."
 $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
 
 echo "==> Configuring iTerm2..."
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$SCRIPT_DIR/iterm2"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$SCRIPT_DIR/apps/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 echo ""
