@@ -63,6 +63,16 @@ cd ~/dev/dotfiles
 make update
 ```
 
+## Adding Tools
+
+Edit `Brewfile`, then:
+
+```bash
+make deps
+```
+
+Commit and push so the team gets it too.
+
 ## Structure
 
 ```
