@@ -3,3 +3,7 @@ neovim/.config/nvim/plugin/packer_compiled.lua
 # Local overrides (never commit these)
 *.local
 .DS_Store
+
+# Generated files
+Brewfile.lock.json
+.claude/

@@ -50,6 +50,7 @@ cp examples/zshrc.local.example ~/.zshrc.local
 ```bash
 make help     # Show available commands
 make          # Re-stow dotfiles after changes
+make update   # Pull latest and restow
 make delete   # Remove all symlinks
 make install  # Full setup (runs install.sh)
 ```
@@ -58,8 +59,7 @@ make install  # Full setup (runs install.sh)
 
 ```bash
 cd ~/dev/dotfiles
-git pull
-make
+make update
 ```
 
 ## Structure

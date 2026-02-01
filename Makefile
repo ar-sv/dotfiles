@@ -1,4 +1,4 @@
-.PHONY: all delete install help
+.PHONY: all delete install update help
 
 all: ## Stow all dotfiles
 	@echo "Stowing dotfiles..."
@@ -11,6 +11,10 @@ delete: ## Remove all dotfile symlinks
 
 install: ## Full setup for new machines
 	./install.sh
+
+update: ## Pull latest and restow
+	git pull
+	@$(MAKE) all
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
