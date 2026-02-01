@@ -50,6 +50,7 @@ cp examples/zshrc.local.example ~/.zshrc.local
 ```bash
 make help     # Show available commands
 make          # Re-stow dotfiles after changes
+make deps     # Install Brewfile packages
 make update   # Pull latest and restow
 make delete   # Remove all symlinks
 make install  # Full setup (runs install.sh)

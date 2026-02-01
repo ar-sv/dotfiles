@@ -1,9 +1,12 @@
-.PHONY: all delete install update help
+.PHONY: all deps delete install update help
 
 all: ## Stow all dotfiles
 	@echo "Stowing dotfiles..."
 	rm -f ~/.zshrc ~/.fzf.zsh
 	stow --verbose --target=$(HOME) --restow */
+
+deps: ## Install Brewfile packages
+	brew bundle
 
 delete: ## Remove all dotfile symlinks
 	@echo "Removing dotfiles..."
