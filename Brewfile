@@ -1,5 +1,4 @@
 # Brewfile
-tap "homebrew/cask-fonts"
 
 # Core CLI tools
 brew "stow"
