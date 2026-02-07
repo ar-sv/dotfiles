@@ -5,7 +5,7 @@ Shared development environment for macOS.
 ## Setup
 
 ```bash
-git clone git@github.com:yourorg/dotfiles.git ~/dev/dotfiles
+git clone git@github.com:ar-sv/dotfiles.git ~/dev/dotfiles
 cd ~/dev/dotfiles
 ./install.sh
 ```
@@ -54,14 +54,3 @@ make update   # Pull latest and restow
 ## Adding Tools
 
 Edit `Brewfile`, run `make deps`, then commit and push.
-
-## What's Included
-
-| Category | Tools |
-|----------|-------|
-| Shell | Zsh, Starship prompt, FZF |
-| Git | Delta diffs, sensible defaults, aliases |
-| Editors | VS Code, Neovim |
-| Terminal | iTerm2, Fira Code Nerd Font |
-| CLI | ripgrep, bat, eza, fd, jq, tree, htop |
-| Runtime | mise (Node, Python, etc.) |
