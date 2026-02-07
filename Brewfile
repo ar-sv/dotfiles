@@ -21,3 +21,7 @@ cask "font-fira-code-nerd-font"
 # Apps
 cask "iterm2"
 cask "visual-studio-code"
+cask "codex"
+cask "cursor"
+cask "claude-code"
+cask "claude"
