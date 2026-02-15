@@ -6,3 +6,5 @@
 .project
 .scratches
 .history
+
+**/.claude/settings.local.json
