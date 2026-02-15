@@ -2,7 +2,6 @@
 
 # Core CLI tools
 brew "stow"
-brew "tmux"
 brew "neovim"
 brew "ripgrep"
 brew "bat"
