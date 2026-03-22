@@ -25,5 +25,4 @@ cask "codex"
 cask "cursor"
 cask "claude-code"
 cask "claude"
-cask "cursor-cli"
 
