@@ -17,6 +17,7 @@ alias grh='git reset --hard && git clean -fd'
 alias vi="nvim"
 alias cat="bat"
 alias th="trash"
+alias rand="openssl rand -hex 32"
 
 # Functions
 wip() {
