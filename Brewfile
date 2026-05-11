@@ -14,6 +14,7 @@ brew "jq"
 brew "tree"
 brew "htop"
 brew "mise"
+brew "glow"
 
 # Fonts
 cask "font-fira-code-nerd-font"
