@@ -1,28 +1,14 @@
-.PHONY: all deps delete install update help
+.PHONY: help install update uninstall
 
-PACKAGES_DIR := packages
+help: ## Show commands
+	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
 
-all: ## Stow all dotfiles
-	@echo "Cleaning up old symlinks..."
-	rm -f ~/.zshrc ~/.fzf.zsh ~/.gitconfig ~/.gemrc ~/.hushlogin
-	rm -f ~/.config/starship.toml
-	rm -rf ~/.config/git
-	@echo "Stowing dotfiles..."
-	cd $(PACKAGES_DIR) && stow --verbose --target=$(HOME) --restow */
-
-deps: ## Install Brewfile packages
-	brew bundle
-
-delete: ## Remove all dotfile symlinks
-	@echo "Removing dotfiles..."
-	cd $(PACKAGES_DIR) && stow --verbose --target=$(HOME) --delete */
-
-install: ## Full setup for new machines
+install: ## Set up this machine
 	./install.sh
 
-update: ## Pull latest and restow
-	git pull
-	@$(MAKE) all
+update: ## Pull latest and apply setup
+	git pull --ff-only
+	./install.sh
 
-help: ## Show this help
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
+uninstall: ## Remove dotfile symlinks
+	cd packages && stow --verbose --target="$(HOME)" --delete */

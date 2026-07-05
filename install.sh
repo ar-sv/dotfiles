@@ -13,17 +13,26 @@ fi
 echo "==> Installing Homebrew (if needed)..."
 if ! command -v brew &> /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+if [ -x /opt/homebrew/bin/brew ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
 fi
 
 echo "==> Installing dependencies..."
-brew bundle --file=Brewfile
+brew bundle --file="$SCRIPT_DIR/Brewfile"
 
 echo "==> Setting up dotfiles..."
-make
+echo "Cleaning up old symlinks..."
+rm -f ~/.zshrc ~/.fzf.zsh ~/.gitconfig ~/.gemrc ~/.hushlogin
+rm -f ~/.config/starship.toml
+rm -rf ~/.config/git
+echo "Stowing dotfiles..."
+cd "$SCRIPT_DIR/packages" && stow --verbose --target="$HOME" --restow */
 
 echo "==> Setting up FZF..."
-$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
+"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --no-update-rc
 
 echo "==> Configuring iTerm2..."
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$SCRIPT_DIR/apps/iterm2"
@@ -35,7 +44,6 @@ for app_dir in "Code" "Cursor"; do
   mkdir -p "$USER_DIR"
   for file in settings.json extensions.json; do
     target="$USER_DIR/$file"
-    # Remove broken symlinks
     if [ -L "$target" ] && [ ! -e "$target" ]; then
       rm "$target"
     fi

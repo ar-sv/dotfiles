@@ -45,12 +45,11 @@ dotfiles/
 ## Commands
 
 ```bash
-make help     # Show all commands
-make          # Re-stow after changes
-make deps     # Install new Brewfile packages
-make update   # Pull latest and restow
+./install.sh  # Set up this machine
+make update   # Pull latest and re-apply setup
+make help     # Show maintenance commands
 ```
 
 ## Adding Tools
 
-Edit `Brewfile`, run `make deps`, then commit and push.
+Edit `Brewfile`, run `./install.sh`, then commit and push.
