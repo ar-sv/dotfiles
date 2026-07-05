@@ -15,6 +15,7 @@ brew "tree"
 brew "htop"
 brew "mise"
 brew "glow"
+brew "opencode"
 
 # Fonts
 cask "font-fira-code-nerd-font"
@@ -26,4 +27,4 @@ cask "codex"
 cask "cursor"
 cask "claude-code"
 cask "claude"
-
+cask "maccy"
