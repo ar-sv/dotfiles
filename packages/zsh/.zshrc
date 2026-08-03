@@ -16,6 +16,7 @@ alias g-cleanup='git branch | grep -v "main" | xargs git branch -D'
 alias grh='git reset --hard && git clean -fd'
 alias vi="nvim"
 alias cat="bat"
+alias glow="glow -p"
 alias th="trash"
 alias rand="openssl rand -hex 32"
 
